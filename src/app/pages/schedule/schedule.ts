@@ -5,7 +5,7 @@ import { AlertController, IonList, IonRouterOutlet, LoadingController, ModalCont
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
-import {DpDatePickerModule} from 'ng2-jalali-date-picker';
+//import {DpDatePickerModule} from 'ng2-jalali-date-picker';
 
 @Component({
   selector: 'page-schedule',
