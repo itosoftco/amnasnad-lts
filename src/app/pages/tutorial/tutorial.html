@@ -1,0 +1,56 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="startApp()" [hidden]="!showSkip">
+        رد کردن
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-slides
+    #slides
+    (ionSlideWillChange)="onSlideChangeStart($event)"
+    pager="false"
+  >
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+      <h2 class="slide-title">
+        به امن اسناد خوش آمدید
+      </h2>
+      <p>
+        <b>امن اسناد از شما در برابر خطر های جعل و سرفت اطلاعات محافظت میکنه</b>
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <h2 class="slide-title">چطور میتونم رمزنگاری کنم</h2>
+      <p>
+        <b>امن اسناد</b>
+      محیط هوشمندی را برای شما فراهم میکند که در ن میتوانید به راحتی اسناد خود را  با کلید اختصصاصی خودتان رمزنگاری کنید و از متدهای رمزنگاری استاندار دنیا و اختصصی ما ایتوسافت کنیم
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <h2 class="slide-title">چطور رمزگشایی کنیم</h2>
+      <p>
+        <b>امن اسناد</b>
+        به شما این امکان را میدهد که با اسکن کردن امن کد ها و وارد کردن کلید عمومی و اختصصاصی اقدام به بازخوانی کد ها بکنید
+      </p>
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+      <h2 class="slide-title">اماده ای؟</h2>
+      <ion-button fill="clear" (click)="startApp()">
+        ادامه
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>چک جدید</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/img/check_home.png" height="100" hspace="100" />
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+ 
+
+    <ion-label>تاریخ</ion-label>
+
+    <ion-item>
+      <ion-input
+        placeholder="مبلغ چک را به  به تومان وارد کنید"
+        clear-input
+        value
+        type="number"
+        clearOnEdit
+      ></ion-input>
+      <ion-label>مبلغ چک</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="شناسه چک را وارد کنید"
+        clear-input
+        value
+        type="number"
+        clearOnEdit
+      ></ion-input>
+      <ion-label>شناسه چک</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="کد ملی دریافت کننده"
+        clear-input
+        value
+        type="number"
+        clearOnEdit
+      ></ion-input>
+      <ion-label>در وجه</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="نام دریافت کننده"
+        clear-input
+        value
+        clearOnEdit
+      ></ion-input>
+      <ion-label>در وجه</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        placeholder="این چک به چه منظور صادر میشود"
+        clear-input
+        value
+        clearOnEdit
+      ></ion-input>
+      <ion-label>بابت</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-textarea placeholder="پشت نویسی و توضیحات چک" autoGrow></ion-textarea>
+  <hr color="dark" />
+  <ion-button size="large" expand="full" color="dark">
+    <ion-icon slot="start" name="lock"></ion-icon>
+    ساخت امن کد
+  </ion-button>
+  <ion-spinner></ion-spinner>
+</ion-content>
