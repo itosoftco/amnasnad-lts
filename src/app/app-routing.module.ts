@@ -35,7 +35,7 @@ const routes: Routes = [
   },  {
     path: 'newcheck',
     loadChildren: () => import('./newcheck/newcheck.module').then( m => m.NewcheckPageModule)
-  },
+  }
 
 ];
 

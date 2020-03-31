@@ -44,6 +44,10 @@ export class SchedulePage implements OnInit {
     this.ios = this.config.get('mode') === 'ios';
   }
 
+
+
+
+
   updateSchedule() {
     // Close any open sliding items when the schedule updates
     if (this.scheduleList) {
