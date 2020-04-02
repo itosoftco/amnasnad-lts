@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'اسکن امن کد',
-      url: '/app/tabs/map',
+      url: '/app/tabs/about',
       icon: 'qr-code'
     },
     {

@@ -1,28 +1,85 @@
 <ion-header translucent="true">
   <ion-toolbar *ngIf="!ios">
-    <h4>پیشخوان</h4>
+    <ion-chip
+      color="primary"
+      slot="start"
+      outline
+      (click)="openAccountpage()"
+      class="ion-padding"
+    >
+      <ion-avatar>
+        <img src="assets/man.jpeg" />
+      </ion-avatar>
+      <ion-label>آواتار</ion-label>
+    </ion-chip>
+
+    <h5 slot="end" class="homee">خانه</h5>
+    <ion-icon name="home" slot="end" class="ion-padding"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true">
-  <ion-card slot>
+  <ion-card>
     <ion-slides>
-      <ion-slide><img src="/assets/img/Picture1.png" /></ion-slide>
+      <ion-slide></ion-slide>
     </ion-slides>
   </ion-card>
-  <ion-card>
+
+  <ion-card color="light" (click)="openchequepage()">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img src="/assets/img/check_home.png"  routerLink="/newcheck" />
+          <img src="/assets/business-and-finances.svg" (click)="none()"  routerLink="/newcheck" />
+          <ion-button class="chequebtn" (click)="openchequepage()" routerLink="/newcheck" >
+            چک‌ها
+          </ion-button>
         </ion-col>
         <ion-col>
-          <img src="/assets/img/kHQVvi4OTbeSdZ1IvC18_2255041.svg" />
+          <img src="/assets/cyber-security.svg" (click)="openmymedia()" />
+          <ion-button class="filebtn" (click)="openfilepage()">
+            فایل‌ها
+          </ion-button>
         </ion-col>
-        <ion-col><img src="/assets/img/doc_home.jpg" /></ion-col>
+        <ion-col>
+          <img src="/assets/document-3.svg" (click)="openmydoc()" />
+          <ion-button class="docbtn" (click)="opendocpage()">اسناد</ion-button>
+        </ion-col>
       </ion-row>
     </ion-grid>
     <ion-card-content></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header></ion-card-header>
+    <ion-card-content>
+      <p></p>
+      <a href="https://example.com" target="_blank" class="lnk">AmnAsnad.ir</a>
+      <img
+        src="/assets/4444.png"
+        style="border-radius: 8px"
+        class="ion-margin-vertical"
+      />
+      <a href="https://example.com" target="_blank"><p></p></a>
+
+      <ion-grid
+        style="font-size: 24px; border-top: solid 1px #eee"
+        class="ion-margin-top ion-padding-top ion-text-center"
+      >
+        <ion-row>
+          <ion-col>
+            <ion-icon name="chatboxes"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="repeat"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="heart"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="share"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
   </ion-card>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
     <ion-fab-button>
