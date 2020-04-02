@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CheckTutorial } from './providers/check-tutorial.service';
 
 const routes: Routes = [
+  { path: 'newcheck/:id', loadChildren: './showqr/showqr.module#ShowqrPageModule' },
   {
     path: '',
     redirectTo: '/tutorial',

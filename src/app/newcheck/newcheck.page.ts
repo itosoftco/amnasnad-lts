@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EncryptionService } from '../services/encryption.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 //import {DpDatePickerModule} from 'ng2-jalali-date-picker';
 
 @Component({
@@ -10,16 +11,18 @@ import { Observable } from 'rxjs';
 })
 export class NewcheckPage implements OnInit {
 
+ information = null;
 
-  results: Observable<any>;
   checkid: string = '';
     cost: string = '';
 	  toname: string = '';
 	    tocode: string = '';
 		  passcode: string = '';
 		    date: string = '';
+			checkfor: string='';
+			back:string='';
   qrpath="https://plink.ir/6ORVe/qr";
-  constructor(private encryptionService: EncryptionService) { }
+  constructor(private encryptionService: EncryptionService ,private router: Router) { }
 
   ngOnInit() {
     document.getElementById('spiner').hidden = true;
@@ -27,13 +30,15 @@ export class NewcheckPage implements OnInit {
   submit_newcheck()
   {
     document.getElementById('spiner').hidden = false;
-  this.results = this.encryptionService.newcheck(this.checkid,this.cost,this.toname,this.tocode,this.passcode,this.date );
-alert('ddd');
-  }
+  this.encryptionService.newcheck(this.checkid,this.cost,this.toname,this.tocode,this.passcode,this.date ,this.checkfor,this.back).subscribe(result => {
+//https://plink.ir/6ORVe
+	  this.information=result;
+	        alert(this.information.Title);
+			 this.router.navigate(['/newcheck/'+this.information.slang]);
+    });
 
-   goto()
-  {
-   alert("goto");
-  }
+
+	
+}
 
 }
